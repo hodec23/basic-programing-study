@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+//making sandglass
+void main(){
+	int A[5][5] = {0};
+	int V = 1;
+	int M = 3;
+	int R=0;
+	int C;
+	
+	for(R = 0; R<M; R++){
+		for(C=R; C<(5-R); C++){
+			A[R][C] = V;
+			V++;
+		}
+	}
+	
+	for(R=M; R<=4; R++){
+		for(C=(4-R); C<=R; C++){
+			A[R][C] = V;
+			V++;
+		}
+	}
+	
+	for(R=0; R<5; R++){
+		for(C=0; C<5; C++){
+			if(A[R][C]==0)
+				printf("\t");
+			else
+				printf("%d\t", A[R][C]);
+		}
+		printf("\n");
+	}
+}
