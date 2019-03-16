@@ -1,6 +1,7 @@
+//Sandglass
+
 #include <stdio.h>
 
-//making sandglass
 void main(){
 	int A[5][5] = {0};
 	int V = 1;
